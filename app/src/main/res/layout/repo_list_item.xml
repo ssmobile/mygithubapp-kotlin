@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_border" >
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:text="@string/nameDummy"
+            style="@style/repoItem"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/languageTV" />
+
+        <TextView
+            android:id="@+id/languageTV"
+            style="@style/repoItem"
+            android:text="@string/languageDummy"
+            android:drawableStart="@drawable/shape_circle_12dp"
+            android:drawablePadding="4dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameTV"
+            app:layout_constraintBottom_toTopOf="@id/lastUpdateTV" />
+
+        <TextView
+            android:id="@+id/lastUpdateTV"
+            style="@style/repoItem"
+            android:text="@string/last_update_dummy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/languageTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
